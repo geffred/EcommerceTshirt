@@ -12,7 +12,7 @@
 	<artifactId>tshirt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tshirt</name>
-	<description>Projet PID 2025 groupe 2 : creation site E-Commerce Tshirt </description>
+	<description>creation site E-Commerce Tshirt </description>
 	<url/>
 	<licenses>
 		<license/>
@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -83,5 +83,25 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <layers enabled="true"/>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+
 
 </project>
