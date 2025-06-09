@@ -14,3 +14,4 @@ COPY --from=build /app/target/*.jar app.jar
 # Exposition du port et commande de démarrage
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
